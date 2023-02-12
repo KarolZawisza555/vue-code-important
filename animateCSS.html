@@ -1,0 +1,40 @@
+<!-- animateCSS.vue LIBRARY -->
+
+<Transition
+  name="custom-classes"
+  enter-active-class="animate__animated animate__bounceInLeft"
+  leave-active-class="animate__animated animate__bounceOutRight"
+>
+  <table v-if="v$.$silentErrors.length">
+    <thead>
+      <tr>
+        <th width="20%">Name</th>
+        <th width="20%">Condition</th>
+        <th width="40%">Message</th>
+      </tr>
+    </thead>
+    <TransitionGroup
+      tag="tbody"
+      enter-active-class="animate__animated animate__bounceIn"
+      leave-active-class="animate__animated animate__bounceOut"
+    >
+      <tr v-for="item in list" :key="item.index>
+
+      </tr>
+    </TransitionGroup>
+  </table>
+</Transition>
+
+<Transition
+    name="custom-classes"
+    enter-active-class="animate__animated animate__bounceInLeft"
+    leave-active-class="animate__animated animate__bounceOutRight"
+>
+    <div v-if="showCode">
+    <pre>
+        <code>
+        {{ v$ }}
+        </code>
+    </pre>
+    </div>
+</Transition>
